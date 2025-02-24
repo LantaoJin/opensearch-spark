@@ -41,3 +41,33 @@ jobs:
         with:
           name: test-reports
           path: target/test-reports # Adjust this path if necessary
+
+      - name: Test report - flint commons
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'target/test-reports/flint-commons/index.html'
+          job_summary: true
+
+      - name: Test report - flint core
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'target/test-reports/flint-core/index.html'
+          job_summary: true
+
+      - name: Test report - flint spark integration
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'target/test-reports/flint-spark-integration/index.html'
+          job_summary: true
+
+      - name: Test report - ppl spark integration
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'target/test-reports/ppl-spark-integration/index.html'
+          job_summary: true
+
+      - name: Test report - sql job
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'target/test-reports/sql-job/index.html'
+          job_summary: true
