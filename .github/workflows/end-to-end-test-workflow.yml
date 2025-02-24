@@ -38,3 +38,9 @@ jobs:
         with:
           name: test-reports
           path: target/test-reports # Adjust this path if necessary
+
+      - name: Test report - e2e test
+        uses: pavi2410/html-preview-action@v4
+        with:
+          html_file: 'target/test-reports/e2e-test/index.html'
+          job_summary: true
